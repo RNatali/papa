@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Модальне вікно</title>
+    <style>
+        /* Стилі для модального вікна */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 1;
+        }
+        
+        .modal-content {
+            background-color: #fff;
+            margin: 10% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
+    </style>
+</head>
+<body>
+    <!-- Кнопка, яка відкриває модальне вікно -->
+    <button id="openModalBtn">Відкрити модальне вікно</button>
+
+    <!-- Модальне вікно -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <!-- Зміст модального вікна -->
+            <h2>Модальне вікно</h2>
+            <p>Це модальне вікно з деяким текстом.</p>
+            
+            <!-- Кнопка для закриття модального вікна -->
+            <button id="closeModalBtn">Закрити</button>
+        </div>
+    </div>
+
+    <script>
+        // Отримуємо посилання на елементи кнопок і модального вікна
+        var openModalBtn = document.getElementById('openModalBtn');
+        var closeModalBtn = document.getElementById('closeModalBtn');
+        var modal = document.getElementById('myModal');
+
+        // Функція, яка відкриває модальне вікно
+        openModalBtn.addEventListener('click', function () {
+            modal.style.display = 'block';
+        });
+
+        // Функція, яка закриває модальне вікно
+        closeModalBtn.addEventListener('click', function () {
+            modal.style.display = 'none';
+        });
+
+        // Закриття модального вікна при кліку поза ним
+        window.addEventListener('click', function (event) {
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Реєстрація</title>
+    <style>
+        body {
+            background-color: #f9f9f9;
+        }
+
+        .container {
+            font-family:Cursive , sans-serif;
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 70px;
+            border: 1px solid #6a85f1;
+            border-radius: 100px;
+            background-color: #d1eff4;
+        }
+
+        .form-group {
+            font-family:Cursive , sans-serif;
+            font-family:Helvetica  , sans-serif;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        select, input[type="text"] {
+            margin-top: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            padding: 20px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            margin: 0 auto;
+            display: block;
+            width: 170px;
+            height: 60px;
+            font-size: 18px;
+        }
+
+        .phone-input-container {
+            display: flex;
+        }
+
+        .country-code {
+            
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            background-color: #f5f5f5;
+        }
+
+        .phone-number {
+            flex: 2;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        .my-button {
+      width: 80px;
+      height: 50px;
+      background-color: #57b5f8d9;
+      color: #ffffff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+   
+
+    </style>
+</head>
+<body background="1111.jpg">
+  <a href="button.html" ><button class="my-button">На головну</button></a>
+
+    <div class="container">
+        <center><h1>Реєстрація</h1></center>
+        <form action="button.html" method="post">
+            <div class="form-group">
+                <label for="username">Ім'я та Прізвище:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="phoneNumber">Номер телефону:</label>
+                <div class="phone-input-container">
+                    <select class="country-code" id="countryCode" name="countryCode">
+                        <option value="+48">+48</option>
+                        <option value="+380">+380</option>
+                        <option value="+050">+050</option>
+                        <!-- Додайте інші коди країн за потреби -->
+                    </select>
+                    <input type="text" class="phone-number" id="phoneNumber" name="phoneNumber" required>
+                </div>
+            </div>
+            <div >
+                <a class="form-group" width=170px;
+                height=60px;><button>Зареєструватися</button></a>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        // Отримуємо елементи DOM
+        const countryCodeSelect = document.getElementById("countryCode");
+        const phoneNumberInput = document.getElementById("phoneNumber");
+    
+        // Додаємо події "change" до вибору коду країни
+        countryCodeSelect.addEventListener("change", updatePhoneNumber);
+        phoneNumberInput.addEventListener("input", handlePhoneNumberInput);
+    
+        // Функція для оновлення вибраного коду країни в полі номера телефону
+        function updatePhoneNumber() {
+            const selectedCountryCode = countryCodeSelect.value;
+            const phoneNumber = phoneNumberInput.value;
+            phoneNumberInput.value = selectedCountryCode + phoneNumber;
+        }
+    
+        // Функція для обробки введення номера телефону
+        function handlePhoneNumberInput() {
+            const phoneNumber = phoneNumberInput.value;
+            const countryCodeOptions = countryCodeSelect.options;
+        }
+            // Перевіряємо, чи містить введений номер один із кодів країн
+            for (let i = 0; i < countryCodeOptions.length; i++) {
+                const countryCode = countryCodeOptions[i].value;
+                if (phoneNumber.startsWith(countryCode)) {
+                    countryCodeSelect.value = countryCode;
+                    break;
+                }
+            }
+            
+            function handleUsernameInput() {
+            const username = usernameInput.value;
+            userNameDisplay.textContent = `Ім'я та Прізвище: ${username}`;
+        }
+    </script>
+    
+</body>
+</html>

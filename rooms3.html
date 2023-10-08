@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>номера2</title>
+    <style>
+        .photo-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .photo-item {
+            width: calc(33.33% - 10px); /* Розмір фото, з відступами між ними */
+            margin-bottom: 20px; /* Відступ між рядками фото */
+            text-align: center;
+            background-color: rgba(161, 217, 242, 0.806);
+        }
+
+        .photo-item img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .photo-item .price {
+            font-weight: bold;
+            font-family:Cursive , sans-serif;
+            color: #1a044e;
+            margin-top: 10px;
+        }
+        .my-button {
+      width: 80px;
+      height: 50px;
+      background-color: #57b5f8d9;
+      color: #ffffff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    
+
+    </style>
+</head>
+<body>
+    <a href="button4.html" ><button class="my-button">Назад</button></a>
+    <div class="photo-gallery">
+        <div class="photo-item">
+            <img src="https://img.poehalisnami.ua/static/hotels/turciya/kemer/h192340/orig/booking192340_3192340_638306313273501949.jpg" alt="Фото 1">
+            <div class="price">4 400 грн.</div>
+        </div>
+        <div class="photo-item">
+            <img src="https://hotel-nivki.kiev.ua/wp-content/uploads/2019/02/3-standart-3.jpg" alt="Фото 2">
+            <div class="price">7 200 грн.</div>
+        </div>
+        <div class="photo-item">
+            <img src="https://hotel-nivki-kiev.hotelmix.com.ua/data/Photos/OriginalPhoto/7857/785752/785752800/Hotel-Nivki-Kyiv-Exterior.JPEG" alt="Фото 3">
+            <div class="price">5 200 грн.</div>
+        </div>
+        <div class="photo-item">
+            <img src="https://img.poehalisnami.ua/static/hotels/turciya/kemer/h24841/orig/booking24841_524841_637379133366328393.jpg" alt="Фото 4">
+            <div class="price">4 500 грн.</div>
+        </div>
+        <div class="photo-item">
+            <img src="https://panda-resort-dahab.hotelmix.com.ua/data/Photos/OriginalPhoto/10851/1085131/1085131342/Panda-Resort-Dahab-Exterior.JPEG" alt="Фото 5">
+            <div class="price">7 100 грн.</div>
+        </div>
+        <div class="photo-item">
+            <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/195315507.jpg?k=e3baaef8230146824a5bb81d2fdadddd7787c98142a6a8ab65adc2da040deabe&o=&hp=1" alt="Фото 6">
+            <div class="price">5 900 грн.</div>
+        </div>
+    </div>
+</body>
+
+</html>

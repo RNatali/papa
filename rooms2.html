@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>номера2</title>
+    <style>
+        .photo-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .photo-item {
+            width: calc(33.33% - 10px); /* Розмір фото, з відступами між ними */
+            margin-bottom: 20px; /* Відступ між рядками фото */
+            text-align: center;
+            background-color: rgba(161, 217, 242, 0.806);
+        }
+
+        .photo-item img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .photo-item .price {
+            font-weight: bold;
+            font-family:Cursive , sans-serif;
+            color: #1a044e;
+            margin-top: 10px;
+        }
+        .my-button {
+      width: 80px;
+      height: 50px;
+      background-color: #57b5f8d9;
+      color: #ffffff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+   
+    </style>
+</head>
+<body>
+    <a href="button4.html" ><button class="my-button">Назад</button></a>
+    <div class="photo-gallery">
+        <div class="photo-item">
+            <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/155924208.jpg?k=8885d8268cdbf9989a9024dea795274ae63f94855f8d94a2c5d34961d52d15ec&o=" alt="Фото 1">
+            <div class="price">6 000 грн.</div>
+        </div>
+        <div class="photo-item">
+            <img src="https://7sky.kiev.ua/wp-content/uploads/2017/12/x4127.jpg.pagespeed.ic.AqUwIdz1ra.jpg" alt="Фото 2">
+            <div class="price">12 000 грн.</div>
+        </div>
+        <div class="photo-item">
+            <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/55569264.jpg?k=f0401fefdc164137baeaf8b85e9e858a105751b8b7fe8fa7ced45c3a2048ce06&o=" alt="Фото 3">
+            <div class="price">8 000 грн.</div>
+        </div>
+        <div class="photo-item">
+            <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/293861850.jpg?k=967a1bb2ae950d4dd441073eda283b888e057821c51128020ea446effe9e196b&o=" alt="Фото 4">
+            <div class="price">3 000 грн.</div>
+        </div>
+        <div class="photo-item">
+            <img src="https://cdn.riastatic.com/photos/dom/photo/18078/1807813/180781358/180781358fm.jpg" alt="Фото 5">
+            <div class="price">5 000 грн.</div>
+        </div>
+        <div class="photo-item">
+            <img src="https://cdn.riastatic.com/photosnew/dom/photo/arenda-posutochnaya-kvartira-kiev-shevchenkovskiy-oievkaya-lia__214811070fl.jpg" alt="Фото 6">
+            <div class="price">5 600 грн.</div>
+        </div>
+    </div>
+</body>
+
+</html>
